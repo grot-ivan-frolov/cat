@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <script defer src="./djava.js"></script>
+  <link rel="stylesheet" href="./stylescat.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-2">Cats</h1>
+
+    <div class="d-flex justify-content-center">
+
+      <button id="Callback-button" data-modal-open="openmod" data-action="${ACTIONS.ADD}" type="button"
+        class="btn btn-success mb-4 _modal-open"> Создать кота</button>
+    </div>
+
+    <hr class="mb-5" />
+    <div data-wr class="d-flex flex-wrap"></div>
+  </div>
+
+  <!-- инфо о коте -->
+
+  <!-- Button trigger modal -->
+
+
+  <!-- модальное окно -->
+  <div class="modal active" _modal="opencat" data-modal="openmod">
+    <div class="modal__content">
+      <h3 class="text-center mb-3"> Create new cat </h3>
+      <form name="createCatForm">
+
+        <div class="mb-3 ">
+
+
+          <div class="mb-3">
+          </div>
+          <input type="number" name="id" placeholder="Id" required class="form-contro" />
+
+        </div>
+
+        <div class="mb-3">
+          <input type="text" name="name" required placeholder="Name" class="form-contro" />
+        </div>
+
+        <div class="mb-3">
+          <input type="number" name="age" placeholder="Age" class="form-contro" />
+        </div>
+
+        <div class="mb-3">
+          <input type="text" name="description" placeholder="Description" class="form-contro" />
+        </div>
+
+        <div class="mb-3">
+          <input type="text" name="image" placeholder="Image url" class="form-contro" />
+        </div>
+
+        <div class="mb-3">
+          <input type="range" name="rate" min="1" max="10" />
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" name="favorite" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">favorite</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Создать кота</button>
+        <button type="button" _modal="close" data-modal-close="openmod"
+          class="btn btn-danger modal-close">Отмена</button>
+         
+
+    </div>
+    </form>
+
+
+
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
